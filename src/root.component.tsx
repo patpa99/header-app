@@ -256,7 +256,7 @@ export default function Root() {
     - Logo 1;
     - Logo 2;
     - icon (which is replaced by another icon when clicked) to open alarm modal;
-    - real-time time;
+    - current time;
     - icon (which is replaced by another icon when clicked) to open weather modal;
     - icon of the user of the active session to open the users drop-down menu;
     - icon (which is replaced by another icon when clicked) to open the languages drop-down menu to select the
