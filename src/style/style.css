@@ -1,0 +1,358 @@
+/* ---------------- To have the same Roboto font everywhere ------------------ */
+@font-face {
+  font-family: 'Roboto';
+  src: url(file-loader!../assets/fonts/Roboto.ttf);
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+#headerContainer {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  font-size: 17px;
+  background-color: #1a1a1a;
+  color: white;
+
+  /* To remove the possibility to highlight text */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  border-bottom: 1px solid #737373;
+  z-index: 3;
+}
+
+#sidebarIconContainer {
+  float: left;
+  width: 70px;
+  height: 60px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border-right: 1px solid #737373;
+}
+
+#sidebarIconContainer:hover {
+  color: #cccccc;
+}
+
+#sidebarIconContainer_none {
+  display: none;
+}
+
+#sidebarIcon {
+  margin-top: 17.5px;
+  margin-bottom: 17.5px;
+  padding: 0px;
+  height: 25px;
+  width: auto;
+}
+
+#logo1Container,
+#logo2Container {
+  float: left;
+  height: 60px;
+  border-right: 1px solid #737373;
+}
+
+#logo1,
+#logo2 {
+  height: 60px;
+  width: auto;
+  /* To change the logo from colored to white */
+  filter: brightness(0) invert(1);
+}
+
+#alarmContainer {
+  float: left;
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#alarmContainer:hover {
+  color: #cccccc;
+}
+
+#alarmIcon {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0px;
+  height: 20px;
+  width: auto;
+}
+
+#languageContainer {
+  display: flex;
+  width: 50px;
+  height: 60px;
+  float: right;
+  text-align: right;
+  vertical-align: middle;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+#languageContainer:hover {
+  color: #cccccc;
+}
+
+#language {
+  flex: 1;
+}
+
+#languageArrowIcon {
+  flex: 1;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0px;
+  height: 20px;
+  width: auto;
+}
+
+#settingsContainer {
+  float: right;
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#settingsContainer:hover {
+  color: #cccccc;
+}
+
+#settingsIcon {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0px;
+  height: 20px;
+  width: auto;
+}
+
+#userContainer {
+  display: flex;
+  float: right;
+  vertical-align: middle;
+  line-height: 60px;
+  width: 100px;
+  padding-left: 4px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+#userContainer:hover {
+  color: #cccccc;
+}
+
+#user {
+  flex: 1;
+}
+
+#userIcon {
+  flex: 1;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 0px;
+  height: 30px;
+  width: auto;
+}
+
+#timeContainer {
+  float: right;
+  text-align: center;
+  width: 80px;
+  line-height: 60px;
+  cursor: default;
+}
+
+#weatherContainer {
+  float: right;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#weatherContainer:hover {
+  color: #cccccc;
+}
+
+#weatherIcon {
+  margin-top: 17.5px;
+  margin-bottom: 17.5px;
+  padding: 0px;
+  height: 25px;
+  width: auto;
+  font-weight: bold;
+}
+
+/* ---------------- FOR TIGHT HEADER ------------------ */
+
+#burgerMenu {
+  height: 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  float: right;
+  margin: 15px 15px 0px 0px;
+  cursor: pointer;
+}
+
+#burgerBar_clicked,
+#burgerBar_unclicked {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+#burgerMenu:hover #burgerBar_clicked,
+#burgerMenu:hover #burgerBar_unclicked {
+  background-color: #cccccc;
+}
+
+/* ------------- Drop-down menu ------------------ */
+#menu_visible,
+#menu_hidden {
+  width: 100%;
+  max-height: 50vh;
+  margin-top: 50px;
+  background-color: #333333;
+  transition: 0.3s;
+  transform: translateY(100%);
+  position: absolute;
+  z-index: 2;
+  border-bottom: 1px solid #737373;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+
+  /* To remove the possibility to highlight text */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  overflow-y: auto;
+}
+
+#menu_hidden {
+  visibility: hidden;
+  transform: translateY(-100%);
+}
+
+#menu_visible {
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#menu_visible a,
+#menu_hidden a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#menu_visible a:hover,
+#menu_hidden a:hover {
+  background-color: #737373;
+}
+
+#timeContainer_tight {
+  float: inline-end;
+  text-align: right;
+  margin: 5px 15px 5px 0px;
+}
+
+#alarmIcon_tight,
+#weatherIcon_tight,
+#userIcon_tight,
+#languageArrowIcon_tight,
+#settingsIcon_tight {
+  height: 16px;
+  width: auto;
+}
+
+/* ------------- Scrollbar of the drop-down menu ------------------ */
+#menu_visible::-webkit-scrollbar,
+#menu_hidden::-webkit-scrollbar {
+  width: 10px;
+}
+
+#menu_visible::-webkit-scrollbar-track,
+#menu_hidden::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 10px;
+}
+
+#menu_visible::-webkit-scrollbar-thumb,
+#menu_hidden::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 10px;
+}
+
+/* ----- Animations for burger menu icon --------- */
+/* Clicked */
+#burgerBar_clicked:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 5px);
+  transition: ease-out 0.3s;
+}
+
+#burgerBar_clicked:nth-child(2) {
+  transform: scale(0.01);
+  transition: ease-out 0.3s;
+}
+
+#burgerBar_clicked:nth-child(3) {
+  transform: rotate(135deg) translate(-6.3px, 4px);
+  transition: ease-out 0.3s;
+}
+
+/* Unclicked */
+#burgerBar_unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+}
+
+/* Media query to change header style when window width is less than 851px */
+@media screen and (max-width: 851px) {
+  #headerContainer {
+    height: 50px;
+  }
+
+  #sidebarIconContainer {
+    width: 50px;
+    height: 50px;
+  }
+
+  #sidebarIcon {
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
+  }
+
+  #logo1Container,
+  #logo2Container {
+    height: 50px;
+  }
+
+  #logo1,
+  #logo2 {
+    height: 50px;
+  }
+}

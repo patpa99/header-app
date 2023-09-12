@@ -1,0 +1,130 @@
+/* ------------- Users Drop Down Menu ------------- */
+#usersDropDownMenu_clicked,
+#usersDropDownMenu_unclicked {
+  position: absolute;
+  top: 60px;
+  right: 65px;
+  font-size: 17px;
+  background-color: #1a1a1a;
+  color: white;
+  border: 1px solid #737373;
+  max-height: 140px;
+  max-width: 210px;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  transition: 0.2s;
+  text-align: center;
+
+  /* To remove the possibility to highlight text */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#usersDropDownMenu_clicked {
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#usersDropDownMenu_unclicked {
+  visibility: hidden;
+  transform: translateY(-100%);
+}
+
+/* ------------- Users Content ------------- */
+#usersContent {
+  width: 100%;
+}
+
+#usersContent a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #737373;
+}
+
+#usersContent a:hover {
+  background-color: #737373;
+}
+
+#logoutButton {
+  color: red;
+}
+
+#usersContent p {
+  float: left;
+  font-weight: bold;
+  margin: 0px 0px 0px 15px;
+  padding: 0px;
+}
+
+#usersContent p:hover {
+  cursor: pointer;
+}
+
+#usersContent input {
+  width: 80%;
+  font-size: 15px;
+  background-color: #e6e6e6;
+  margin-bottom: 10px;
+}
+
+#usernameRules,
+#pswRules {
+  font-size: 12px;
+}
+
+#editButton,
+#changeButton {
+  font-size: 15px;
+  background-color: #80ccff;
+  color: black;
+  border-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#editButton:hover,
+#changeButton:hover {
+  cursor: pointer;
+}
+
+#succFail {
+  font-weight: bold;
+}
+
+/* ------------- Scrollbar of the users drop down menu ------------------ */
+#usersDropDownMenu_clicked::-webkit-scrollbar,
+#usersDropDownMenu_unclicked::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+#usersDropDownMenu_clicked::-webkit-scrollbar-track,
+#usersDropDownMenu_unclicked::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 10px;
+}
+
+#usersDropDownMenu_clicked::-webkit-scrollbar-thumb,
+#usersDropDownMenu_unclicked::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 10px;
+}
+
+/* Media query to change users drop down menu style when window width is less than 851px */
+@media screen and (max-width: 851px) {
+  #usersDropDownMenu_clicked,
+  #usersDropDownMenu_unclicked {
+    background-color: #404040;
+    font-size: 15px;
+    top: 195px;
+    left: 57%;
+    right: auto;
+    transform: none;
+    transition: 0s;
+  }
+}

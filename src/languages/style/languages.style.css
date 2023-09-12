@@ -1,0 +1,83 @@
+/* ------------- Languages Drop Down Menu ------------- */
+#languageDropDownMenu_clicked,
+#languageDropDownMenu_unclicked {
+  position: absolute;
+  top: 60px;
+  right: 49px;
+  font-size: 17px;
+  background-color: #1a1a1a;
+  color: white;
+  max-height: 140px;
+  max-width: 50px;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  transition: 0.2s;
+
+  /* To remove the possibility to highlight text */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#languageDropDownMenu_clicked {
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#languageDropDownMenu_unclicked {
+  visibility: hidden;
+  transform: translateY(-100%);
+}
+
+/* ------------- Language Content ------------- */
+#langContent {
+  width: 100%;
+}
+
+#langContent a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  border: 1px solid #737373;
+}
+
+#langContent a:hover {
+  background-color: #737373;
+}
+
+/* ------------- Scrollbar of the languages drop down menu ------------------ */
+#languageDropDownMenu_clicked::-webkit-scrollbar,
+#languageDropDownMenu_unclicked::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+#languageDropDownMenu_clicked::-webkit-scrollbar-track,
+#languageDropDownMenu_unclicked::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 10px;
+}
+
+#languageDropDownMenu_clicked::-webkit-scrollbar-thumb,
+#languageDropDownMenu_unclicked::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 10px;
+}
+
+/* Media query to change languages drop down menu style when window width is less than 851px */
+@media screen and (max-width: 851px) {
+  #languageDropDownMenu_clicked,
+  #languageDropDownMenu_unclicked {
+    background-color: #404040;
+    font-size: 15px;
+    top: 242px;
+    left: 57%;
+    right: auto;
+    transform: none;
+    transition: 0s;
+  }
+}

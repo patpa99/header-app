@@ -1,0 +1,88 @@
+/* ------------- Settings Drop Down Menu ------------- */
+#settingsDropDownMenu_clicked,
+#settingsDropDownMenu_unclicked {
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  font-size: 17px;
+  background-color: #1a1a1a;
+  color: white;
+  border: 1px solid #737373;
+  max-height: 40vh;
+  max-width: 250px;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  transition: 0.2s;
+  text-align: center;
+  padding: 10px;
+
+  /* To remove the possibility to highlight text */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#settingsDropDownMenu_clicked {
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#settingsDropDownMenu_unclicked {
+  visibility: hidden;
+  transform: translateY(-100%);
+}
+
+/* ------------- Settings Content ------------- */
+#settingsContent {
+  width: 100%;
+}
+
+#futureDevTxt {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#titleAboutTheDeveloper {
+  font-weight: bold;
+}
+
+#developerImg {
+  border-radius: 50%;
+  width: 50%;
+  height: auto;
+  border: 2px solid #737373;
+}
+
+/* ------------- Scrollbar of the settings drop down menu ------------------ */
+#settingsDropDownMenu_clicked::-webkit-scrollbar,
+#settingsDropDownMenu_unclicked::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+#settingsDropDownMenu_clicked::-webkit-scrollbar-track,
+#settingsDropDownMenu_unclicked::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 10px;
+}
+
+#settingsDropDownMenu_clicked::-webkit-scrollbar-thumb,
+#settingsDropDownMenu_unclicked::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 10px;
+}
+
+/* Media query to change settings drop down menu style when window width is less than 851px */
+@media screen and (max-width: 851px) {
+  #settingsDropDownMenu_clicked,
+  #settingsDropDownMenu_unclicked {
+    background-color: #404040;
+    font-size: 15px;
+    top: 288px;
+    left: 57%;
+    right: auto;
+    transform: none;
+    transition: 0s;
+  }
+}

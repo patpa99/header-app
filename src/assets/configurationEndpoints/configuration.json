@@ -1,0 +1,9 @@
+{
+  "headerConfig": "http://localhost:3000/configuration/getHeaderConfig",
+  "getLanguagesList": "http://localhost:3000/languages/getLanguagesList",
+  "getUserLanguageFromId": "http://localhost:3000/languages/getUserLanguageFromId",
+  "setUserLanguage": "http://localhost:3000/languages/setUserLanguage",
+  "getUserById": "http://localhost:3000/users/getUserById",
+  "updateUserById": "http://localhost:3000/users/updateUserById",
+  "updatePswUserById": "http://localhost:3000/users/updatePswUserById"
+}
